@@ -7,6 +7,10 @@ export default defineConfig({
     react(),
     eslint({
       include: ["src/**/*.js", "src/**/*.jsx"],
+      emitWarning: true,
+      emitError: true,
+      failOnWarning: false,
+      failOnError: false,
     }),
   ],
 });

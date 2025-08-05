@@ -17,5 +17,11 @@
       "version": "detect"
     }
   },
-  "rules": {}
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "react-refresh/only-export-components": "off"
+  }
 }
