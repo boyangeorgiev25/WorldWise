@@ -159,27 +159,6 @@ npm run preview      # Preview production build
 npm run lint         # Run ESLint
 ```
 
-## 🌐 Deployment
-
-### Docker Production Deployment
-The most efficient way to deploy WorldWise:
-
-```bash
-# Build and run in production mode
-docker build -t worldwise .
-docker run -d -p 80:80 --name worldwise-app worldwise
-```
-
-### Netlify
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
-3. Set up automatic deployments from your GitHub repository
-
-### Manual Deployment
-```bash
-npm run build
-# Upload the contents of 'dist' folder to your hosting provider
-```
 
 ## 🧪 Testing
 
