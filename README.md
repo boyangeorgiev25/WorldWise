@@ -27,20 +27,22 @@ A modern React application that helps travelers keep track of cities they've vis
 - Persistent login sessions
 - Individual data collections per user account
 
-## 🚀 Live Demo
-
-[View Live Demo](your-deployment-url-here) *(Coming Soon)*
-
 ## 📸 Screenshots
-
 ### Homepage
 *Clean landing page with call-to-action*
+
+<img width="1680" height="927" alt="Screenshot 2025-08-10 at 12 36 05 PM" src="https://github.com/user-attachments/assets/e1afd8a6-94b1-4a64-9ea5-b71edee9a68b" />
 
 ### Authentication
 *Secure login and registration forms*
 
+<img width="1668" height="911" alt="Screenshot 2025-08-10 at 12 36 32 PM" src="https://github.com/user-attachments/assets/5b44de7c-b0c8-41d1-9911-07638e7e3b8f" />
+
 ### Main Application
 *Interactive map and city management interface*
+
+<img width="1680" height="926" alt="Screenshot 2025-08-10 at 12 37 00 PM" src="https://github.com/user-attachments/assets/1f75b4c3-e5d3-464f-9798-9d9a5376932e" />
+
 
 ## 🛠️ Technologies Used
 
@@ -60,26 +62,6 @@ Before you begin, ensure you have met the following requirements:
 - npm or yarn package manager
 - Modern web browser with JavaScript enabled
 
-## ⚙️ Installation & Setup
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/worldwise.git
-   cd worldwise
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173`
 
 ## 🎯 Usage
 
@@ -89,10 +71,6 @@ Before you begin, ensure you have met the following requirements:
 3. **Add Cities:** Explore the map and add cities you've visited
 4. **Manage Collection:** View, edit, and delete cities from your personal list
 
-### User Flow
-```
-Homepage → Sign Up → Login → App Dashboard → Add/Manage Cities
-```
 
 ## 📁 Project Structure
 
@@ -128,14 +106,10 @@ npm run lint         # Run ESLint
 
 ## 🌐 Deployment
 
-### Netlify (Recommended)
+### Netlify
 1. Build the project: `npm run build`
 2. Deploy the `dist` folder to Netlify
 3. Set up automatic deployments from your GitHub repository
-
-### Vercel
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect Vite and configure deployment
 
 ### Manual Deployment
 ```bash
@@ -157,15 +131,6 @@ The application includes comprehensive error handling and form validation. To te
    - Verify data isolation between users
    - Test city add/delete functionality
 
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ## 🐛 Known Issues
 
@@ -182,25 +147,4 @@ Contributions are welcome! Here's how you can help:
 - [ ] Travel statistics and analytics
 - [ ] Mobile app version
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Name](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
-
-## 🙏 Acknowledgments
-
-- React team for the amazing framework
-- Vite for the fast build tool
-- The open-source community for inspiration and resources
-
----
-
-⭐ If you found this project helpful, please give it a star on GitHub!
-
-*Built with ❤️ using React*
