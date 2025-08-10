@@ -1,42 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
       "cityName": "Lis",
       "country": "Portugal",
       "emoji": "🇵🇹",
@@ -46,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Barselona",
@@ -58,7 +22,55 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
+    },
+    {
+      "id": "0c58",
+      "cityName": "Sevenoaks",
+      "country": "United Kingdom of Great Britain and Northern Ireland (the)",
+      "emoji": "🇬🇧",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "51.26191485308451",
+        "lng": "0.17578125"
+      }
+    },
+    {
+      "id": "5c34",
+      "cityName": "Ballinasloe",
+      "country": "Ireland",
+      "emoji": "🇮🇪",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "53.4357192066942",
+        "lng": "-8.569335937500002"
+      }
+    },
+    {
+      "id": "2c6d",
+      "cityName": "Lesnoye",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "58.21702494960191",
+        "lng": "36.07910156250001"
+      }
+    },
+    {
+      "id": "608c",
+      "cityName": "Troyan",
+      "country": "Bulgaria",
+      "emoji": "🇧🇬",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "42.908160071960566",
+        "lng": "24.609375000000004"
+      }
     }
   ]
 }

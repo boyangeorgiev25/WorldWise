@@ -15,7 +15,7 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams();
-  const { currentCity, getCity, isLoading } = useCities();
+  const { currentCity, getCity, isLoading, deleteCity } = useCities();
   const navigate = useNavigate();
 
   useEffect(
@@ -26,6 +26,17 @@ function City() {
   );
 
   const { cityName, emoji, date, notes } = currentCity;
+
+  async function handleDelete() {
+    const confirmed = window.confirm(
+      `Are you sure you want to delete ${cityName}?`
+    );
+    
+    if (confirmed) {
+      await deleteCity(id);
+      navigate("/app/cities");
+    }
+  }
 
   if (isLoading) return <Spinner />;
 
@@ -64,6 +75,9 @@ function City() {
       <div>
         <Button type="back" onClick={() => navigate(-1)}>
           &larr; Back
+        </Button>
+        <Button type="primary" onClick={handleDelete}>
+          Delete
         </Button>
       </div>
     </div>
