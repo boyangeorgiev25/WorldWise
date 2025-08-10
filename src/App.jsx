@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { CitiesProvider } from "./Context/CitiesContext.jsx";
-import { AuthProvider } from "./Context/AuthContext.jsx";
+import { CitiesProvider } from "./context/CitiesContext.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 import Product from "./pages/Product";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
