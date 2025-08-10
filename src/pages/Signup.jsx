@@ -1,7 +1,7 @@
 import PageNav from "../components/PageNav";
 import styles from "./Login.module.css";
 import { useState, useEffect } from "react";
-import { useAuth } from "../Context/AuthContext";
+import { useAuth } from "../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 
 export default function Signup() {
