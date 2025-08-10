@@ -59,15 +59,64 @@ A modern React application that helps travelers keep track of cities they've vis
 - **Storage:** LocalStorage for data persistence
 - **Development:** Vite, ESLint
 - **UI Components:** Custom React components
+- **Containerization:** Docker with multi-stage builds
 
 ## 📋 Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
+### For Local Development:
 - Node.js (v16.0 or higher)
 - npm or yarn package manager
 - Modern web browser with JavaScript enabled
 
+### For Docker Deployment:
+- Docker installed on your system
+- Docker Compose (optional)
+
+## ⚙️ Installation & Setup
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/worldwise.git
+   cd worldwise
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173`
+
+### 🐳 Docker Deployment
+
+Run the application using Docker for consistent deployment across environments:
+
+1. **Build the Docker image**
+   ```bash
+   docker build -t worldwise .
+   ```
+
+2. **Run the container**
+   ```bash
+   docker run -p 8080:80 worldwise
+   ```
+
+3. **Access the application**
+   Navigate to `http://localhost:8080`
+
+The Dockerfile uses a multi-stage build:
+- **Stage 1:** Node.js 18 to build the React application
+- **Stage 2:** Nginx Alpine to serve the production build efficiently
 
 ## 🎯 Usage
 
@@ -111,6 +160,15 @@ npm run lint         # Run ESLint
 ```
 
 ## 🌐 Deployment
+
+### Docker Production Deployment
+The most efficient way to deploy WorldWise:
+
+```bash
+# Build and run in production mode
+docker build -t worldwise .
+docker run -d -p 80:80 --name worldwise-app worldwise
+```
 
 ### Netlify
 1. Build the project: `npm run build`
