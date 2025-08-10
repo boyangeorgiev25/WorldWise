@@ -27,6 +27,12 @@ A modern React application that helps travelers keep track of cities they've vis
 - Persistent login sessions
 - Individual data collections per user account
 
+- ### 🗺️ **Travel Planning Interface**
+- Interactive UI for planning your travel destinations
+- Add cities with location coordinates and personal notes
+- Visual map display (requires API key configuration)
+- View and manage your travel wishlist
+
 ## 📸 Screenshots
 ### Homepage
 *Clean landing page with call-to-action*
@@ -147,8 +153,3 @@ The application includes comprehensive error handling and form validation. To te
 - [ ] Travel statistics and analytics
 - [ ] Mobile app version
 
-### 🗺️ **Travel Planning Interface**
-- Interactive UI for planning your travel destinations
-- Add cities with location coordinates and personal notes
-- Visual map display (requires API key configuration)
-- View and manage your travel wishlist
