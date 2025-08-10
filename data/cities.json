@@ -1,75 +1,135 @@
 {
   "cities": [
     {
-      "cityName": "Lis",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
-      "cityName": "Barselona",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "id": "0735",
+      "cityName": "Ulytau",
+      "country": "Kazakhstan",
+      "emoji": "🇰🇿",
+      "date": "2025-08-10",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": "17806751"
+        "lat": "47.69497434186282",
+        "lng": "66.26953125000001"
+      }
     },
     {
-      "id": "0c58",
-      "cityName": "Sevenoaks",
+      "id": "3558",
+      "cityName": "Serik",
+      "country": "Turkiye",
+      "emoji": "🇹🇷",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "36.90597988519294",
+        "lng": "30.937500000000004"
+      }
+    },
+    {
+      "id": "8283",
+      "cityName": "Dimos Karpenisi",
+      "country": "Greece",
+      "emoji": "🇬🇷",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "38.75408327579141",
+        "lng": "21.796875000000004"
+      }
+    },
+    {
+      "id": "5c45",
+      "cityName": "Kiplin",
       "country": "United Kingdom of Great Britain and Northern Ireland (the)",
       "emoji": "🇬🇧",
       "date": "2025-08-10",
       "notes": "",
       "position": {
-        "lat": "51.26191485308451",
-        "lng": "0.17578125"
+        "lat": "54.36775852406841",
+        "lng": "-1.5820312500000002"
       }
     },
     {
-      "id": "5c34",
-      "cityName": "Ballinasloe",
-      "country": "Ireland",
-      "emoji": "🇮🇪",
+      "id": "4609",
+      "cityName": "Precinct Eleven",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
       "date": "2025-08-10",
       "notes": "",
       "position": {
-        "lat": "53.4357192066942",
-        "lng": "-8.569335937500002"
+        "lat": "42.553080288955826",
+        "lng": "-97.3828125"
       }
     },
     {
-      "id": "2c6d",
-      "cityName": "Lesnoye",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
+      "id": "9d57",
+      "cityName": "Le Perreux-sur-Marne",
+      "country": "France",
+      "emoji": "🇫🇷",
       "date": "2025-08-10",
       "notes": "",
       "position": {
-        "lat": "58.21702494960191",
-        "lng": "36.07910156250001"
+        "lat": "48.850258199721495",
+        "lng": "2.5048828125000004"
       }
     },
     {
-      "id": "608c",
-      "cityName": "Troyan",
+      "id": "cded",
+      "cityName": "Cheniers",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "46.37725420510028",
+        "lng": "1.8017578125000002"
+      }
+    },
+    {
+      "id": "69f6",
+      "cityName": "Portets",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "44.692088041727786",
+        "lng": "-0.42846679687500006"
+      }
+    },
+    {
+      "id": "3159",
+      "cityName": "Rivas-Vaciamadrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "40.36328834091583",
+        "lng": "-3.5375976562500004"
+      }
+    },
+    {
+      "id": "cbf5",
+      "cityName": "Cape Town",
+      "country": "South Africa",
+      "emoji": "🇿🇦",
+      "date": "2025-08-10",
+      "notes": "",
+      "position": {
+        "lat": "-33.94335994657881",
+        "lng": "18.720703125000004"
+      }
+    },
+    {
+      "id": "004b",
+      "cityName": "Sliven",
       "country": "Bulgaria",
       "emoji": "🇧🇬",
       "date": "2025-08-10",
       "notes": "",
       "position": {
-        "lat": "42.908160071960566",
-        "lng": "24.609375000000004"
+        "lat": "42.65820178455667",
+        "lng": "26.383666992187504"
       }
     }
   ]

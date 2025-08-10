@@ -7,14 +7,25 @@ function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
+  console.log("ProtectedRoute - isAuthenticated:", isAuthenticated);
+
   useEffect(
     function () {
-      if (!isAuthenticated) navigate("/");
+      if (!isAuthenticated) {
+        console.log("Not authenticated, navigating to /");
+        navigate("/");
+      }
     },
     [isAuthenticated, navigate]
   );
 
-  return isAuthenticated ? children : null;
+  if (!isAuthenticated) {
+    console.log("Returning null - not authenticated");
+    return null;
+  }
+
+  console.log("Returning children - authenticated");
+  return children;
 }
 
 ProtectedRoute.propTypes = {

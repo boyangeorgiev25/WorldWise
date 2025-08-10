@@ -13,6 +13,7 @@ import styles from "./Map.module.css";
 import Button from "./Button";
 import { useGeolocation } from "../hooks/useGeolocation";
 import { useUrlPosition } from "../hooks/useUrlPosition";
+import PropTypes from "prop-types";
 
 export default function Map() {
   const { cities } = useCities();
@@ -82,6 +83,10 @@ function ChangeCenter({ position }) {
   map.setView(position);
   return null;
 }
+
+ChangeCenter.propTypes = {
+  position: PropTypes.array.isRequired,
+};
 
 function DetectClick() {
   const navigate = useNavigate();
