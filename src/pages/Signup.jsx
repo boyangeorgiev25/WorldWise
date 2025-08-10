@@ -4,27 +4,34 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../Context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
 
-export default function Login() {
+export default function Signup() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   
-  const { login, isAuthenticated } = useAuth();
+  const { signup, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
     
-    if (!email || !password) {
+    if (!name || !email || !password) {
       setError("Please fill in all fields");
       return;
     }
 
-    const result = login(email, password);
-    if (!result.success) {
-      setError(result.error);
-    } else {
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return;
+    }
+
+    try {
       setError("");
+      signup(name, email, password);
+      navigate("/login");
+    } catch (err) {
+      setError(err.message);
     }
   }
 
@@ -40,12 +47,24 @@ export default function Login() {
       <PageNav />
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.row}>
+          <label htmlFor="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            required
+          />
+        </div>
+
+        <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
             type="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            required
           />
         </div>
 
@@ -56,6 +75,8 @@ export default function Login() {
             id="password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
+            required
+            minLength="6"
           />
         </div>
 
@@ -66,14 +87,14 @@ export default function Login() {
         )}
 
         <div>
-          <button type="submit">Login</button>
+          <button type="submit">Sign Up</button>
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <p>
-            Don&apos;t have an account?{" "}
-            <Link to="/signup" style={{ color: '#00c46a', textDecoration: 'none' }}>
-              Sign up here
+            Already have an account?{" "}
+            <Link to="/login" style={{ color: '#00c46a', textDecoration: 'none' }}>
+              Login here
             </Link>
           </p>
         </div>

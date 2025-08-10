@@ -6,63 +6,70 @@ import {
   useState,
 } from "react";
 import PropTypes from "prop-types";
+import { useAuth } from "./AuthContext";
 
 const CitiesContext = createContext();
-
-const BASE_URL = "http://localhost:3000";
 
 function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCity, setCurrentCity] = useState({});
+  const { user } = useAuth();
+
+  // Get user-specific cities from localStorage
+  function getUserCities(userId) {
+    if (!userId) return [];
+    const userCities = localStorage.getItem(`worldwise-cities-${userId}`);
+    return userCities ? JSON.parse(userCities) : [];
+  }
+
+  // Save user-specific cities to localStorage
+  function saveUserCities(userId, cities) {
+    if (!userId) return;
+    localStorage.setItem(`worldwise-cities-${userId}`, JSON.stringify(cities));
+  }
 
   useEffect(() => {
-    async function fetchCities() {
-      try {
-        setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        setCities(data);
-      } catch {
-        alert("There was an error loading data ....");
-      } finally {
-        setIsLoading(false);
-      }
+    if (user?.id || user?.email) {
+      const userId = user.id || user.email;
+      const userCities = getUserCities(userId);
+      setCities(userCities);
+    } else {
+      setCities([]);
     }
-    fetchCities();
-  }, []);
+  }, [user]);
 
   const getCity = useCallback(
-    async function getCity(id) {
-      if (Number(id) === currentCity.id) return;
+    function getCity(id) {
+      if (String(id) === String(currentCity.id)) return;
 
-      try {
-        setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities/${id}`);
-        const data = await res.json();
-        setCurrentCity(data);
-      } catch {
-        alert("There was an error loading data ....");
-      } finally {
-        setIsLoading(false);
+      const city = cities.find(city => String(city.id) === String(id));
+      if (city) {
+        setCurrentCity(city);
       }
     },
-    [currentCity.id]
+    [currentCity.id, cities]
   );
 
-  async function createCity(newCity) {
+  function createCity(newCity) {
+    if (!user?.id && !user?.email) {
+      alert("You must be logged in to add cities.");
+      return;
+    }
+
     try {
       setIsLoading(true);
-      const res = await fetch(`${BASE_URL}/cities`, {
-        method: "POST",
-        body: JSON.stringify(newCity),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const data = await res.json();
+      const cityWithId = {
+        ...newCity,
+        id: Date.now().toString(),
+        userId: user.id || user.email,
+      };
 
-      setCities((cities) => [...cities, data]);
+      const updatedCities = [...cities, cityWithId];
+      setCities(updatedCities);
+      
+      const userId = user.id || user.email;
+      saveUserCities(userId, updatedCities);
     } catch {
       alert("There was an error creating city.");
     } finally {
@@ -70,14 +77,19 @@ function CitiesProvider({ children }) {
     }
   }
 
-  async function deleteCity(id) {
+  function deleteCity(id) {
+    if (!user?.id && !user?.email) {
+      alert("You must be logged in to delete cities.");
+      return;
+    }
+
     try {
       setIsLoading(true);
-      await fetch(`${BASE_URL}/cities/${id}`, {
-        method: "DELETE",
-      });
-
-      setCities((cities) => cities.filter((city) => city.id !== id));
+      const updatedCities = cities.filter((city) => String(city.id) !== String(id));
+      setCities(updatedCities);
+      
+      const userId = user.id || user.email;
+      saveUserCities(userId, updatedCities);
     } catch {
       alert("There was an error deleting city.");
     } finally {
@@ -103,4 +115,5 @@ function useCities() {
   return context;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { CitiesProvider, useCities };
