@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import PropTypes from "prop-types";
-import { useAuth } from "./AuthContext";
+import { useAuth } from "../context/AuthContext";
 
 const CitiesContext = createContext();
 

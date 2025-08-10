@@ -5,7 +5,7 @@ import styles from "./Form.module.css";
 import Button from "./Button";
 import BackButton from "./BackButton";
 import { useUrlPosition } from "../hooks/useUrlPosition";
-import { useCities } from "../Context/CitiesContext";
+import { useCities } from "../context/CitiesContext";
 import Message from "./Message";
 import Spinner from "./Spinner";
 import { convertToEmoji } from "../utils/convertToEmoji";

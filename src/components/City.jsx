@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import styles from "./City.module.css";
-import { useCities } from "../Context/CitiesContext";
+import { useCities } from "../context/CitiesContext";
 import Spinner from "./Spinner";
 import Button from "./Button";
 
