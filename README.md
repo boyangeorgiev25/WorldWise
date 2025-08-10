@@ -147,4 +147,8 @@ The application includes comprehensive error handling and form validation. To te
 - [ ] Travel statistics and analytics
 - [ ] Mobile app version
 
-
+### 🗺️ **Travel Planning Interface**
+- Interactive UI for planning your travel destinations
+- Add cities with location coordinates and personal notes
+- Visual map display (requires API key configuration)
+- View and manage your travel wishlist
