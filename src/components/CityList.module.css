@@ -17,14 +17,15 @@
 /* Mobile responsive city list */
 @media (max-width: 768px) {
   .cityList {
-    height: 50vh;
-    gap: 1rem;
+    height: auto;
+    max-height: 25vh;
+    gap: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .cityList {
-    height: 45vh;
-    gap: 0.8rem;
+    max-height: 20vh;
+    gap: 0.6rem;
   }
 }

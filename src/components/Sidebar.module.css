@@ -22,9 +22,12 @@
 @media (max-width: 768px) {
   .sidebar {
     flex-basis: auto;
-    height: 40vh;
-    padding: 2rem;
-    min-height: 300px;
+    height: auto;
+    min-height: 35vh;
+    max-height: 50vh;
+    padding: 1.5rem;
+    overflow-y: auto;
+    flex-shrink: 0;
   }
   
   .footer {
@@ -34,8 +37,8 @@
 
 @media (max-width: 480px) {
   .sidebar {
-    height: 35vh;
-    padding: 1.5rem;
-    min-height: 250px;
+    min-height: 30vh;
+    max-height: 45vh;
+    padding: 1rem;
   }
 }

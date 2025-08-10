@@ -87,40 +87,67 @@ function Form() {
   if (geocodingError) return <Message message={geocodingError} />;
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit} noValidate>
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
           id="cityName"
+          name="cityName"
+          type="text"
+          required
+          aria-required="true"
+          aria-describedby={cityName ? undefined : "cityName-error"}
           onChange={(e) => setCityName(e.target.value)}
           value={cityName}
+          placeholder="Enter city name"
+          autoComplete="address-level2"
         />
-        <span className={styles.flag}>{emoji}</span>
+        <span className={styles.flag} aria-label={`${country} flag`}>{emoji}</span>
+        {!cityName && <span id="cityName-error" className={styles.error} role="alert">City name is required</span>}
       </div>
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
         <input
           id="date"
+          name="date"
           type="date"
+          required
+          aria-required="true"
+          aria-describedby={date ? undefined : "date-error"}
           onChange={(e) => setDate(e.target.value)}
           value={date}
+          max={new Date().toISOString().split('T')[0]}
         />
+        {!date && <span id="date-error" className={styles.error} role="alert">Date is required</span>}
       </div>
 
       <div className={styles.row}>
         <label htmlFor="notes">Notes about your trip to {cityName}</label>
         <textarea
           id="notes"
+          name="notes"
           onChange={(e) => setNotes(e.target.value)}
           value={notes}
+          placeholder="Share your memories..."
+          rows="3"
+          maxLength="500"
         />
+        <small className={styles.hint}>{notes.length}/500 characters</small>
       </div>
 
       <div className={styles.buttons}>
-        <Button type="primary" onClick={handleSubmit}>
+        <Button 
+          type="primary" 
+          onClick={handleSubmit}
+          disabled={isLoading || !cityName || !date}
+          aria-describedby="submit-help"
+        >
           {isLoading ? "Adding..." : "Add"}
         </Button>
+        <small id="submit-help" className={styles.hint}>
+          {(!cityName || !date) ? "Please fill required fields" : "Ready to add city"}
+        </small>
         <BackButton />
       </div>
     </form>

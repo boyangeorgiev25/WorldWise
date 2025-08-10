@@ -32,3 +32,33 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+/* Mobile responsive user component */
+@media (max-width: 768px) {
+  .user {
+    position: static;
+    margin: 0 auto 1rem auto;
+    width: fit-content;
+    top: auto;
+    right: auto;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 480px) {
+  .user {
+    padding: 0.8rem 1rem;
+    font-size: 1.4rem;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .user img {
+    height: 3rem;
+  }
+  
+  .user button {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+  }
+}
