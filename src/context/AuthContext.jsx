@@ -1,11 +1,11 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 import PropTypes from "prop-types";
 
 const AuthContext = createContext(null);
 
 const initialState = {
-  user: null,
-  isAuthenticated: false,
+  user: JSON.parse(localStorage.getItem('worldwise-current-user')) || null,
+  isAuthenticated: !!JSON.parse(localStorage.getItem('worldwise-current-user')),
   users: JSON.parse(localStorage.getItem('worldwise-users')) || [],
 };
 
@@ -48,6 +48,7 @@ function AuthProvider({ children }) {
     // Check registered users
     const registeredUser = users.find(u => u.email === email && u.password === password);
     if (registeredUser) {
+      localStorage.setItem('worldwise-current-user', JSON.stringify(registeredUser));
       dispatch({ type: "login", payload: registeredUser });
       return { success: true };
     }
@@ -75,6 +76,7 @@ function AuthProvider({ children }) {
   }
 
   function logout() {
+    localStorage.removeItem('worldwise-current-user');
     dispatch({ type: "logout" });
   }
 
