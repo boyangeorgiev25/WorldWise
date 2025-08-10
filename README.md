@@ -26,8 +26,8 @@ A modern React application that helps travelers keep track of cities they've vis
 - Local storage for user data and preferences
 - Persistent login sessions
 - Individual data collections per user account
-
-- ### 🗺️ **Travel Planning Interface**
+  
+ ### 🗺️ **Travel Planning Interface**
 - Interactive UI for planning your travel destinations
 - Add cities with location coordinates and personal notes
 - Visual map display (requires API key configuration)
