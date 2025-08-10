@@ -32,3 +32,47 @@
   color: var(--color-light--1);
   margin-bottom: 2.5rem;
 }
+
+/* Mobile responsive homepage */
+@media (max-width: 768px) {
+  .homepage {
+    margin: 1rem;
+    padding: 2rem;
+    height: calc(100vh - 3rem);
+  }
+  
+  .homepage h1 {
+    font-size: 3.5rem;
+  }
+  
+  .homepage h2 {
+    width: 95%;
+    font-size: 1.7rem;
+  }
+  
+  .homepage section {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage {
+    margin: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .homepage h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+  }
+  
+  .homepage h2 {
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .homepage section {
+    gap: 1.5rem;
+  }
+}

@@ -17,3 +17,25 @@
   font-size: 1.2rem;
   color: var(--color-light--1);
 }
+
+/* Mobile responsive sidebar */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: auto;
+    height: 40vh;
+    padding: 2rem;
+    min-height: 300px;
+  }
+  
+  .footer {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    height: 35vh;
+    padding: 1.5rem;
+    min-height: 250px;
+  }
+}

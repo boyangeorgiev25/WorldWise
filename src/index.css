@@ -26,6 +26,19 @@ html {
   box-sizing: border-box;
 }
 
+/* Mobile responsive font sizing */
+@media (max-width: 768px) {
+  html {
+    font-size: 56.25%; /* 9px */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* 8px */
+  }
+}
+
 body {
   font-family: "Manrope", sans-serif;
   color: var(--color-light--2);

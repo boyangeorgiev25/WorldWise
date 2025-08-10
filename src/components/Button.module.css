@@ -33,3 +33,29 @@
   color: var(--color-dark--1);
   box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
 }
+
+/* Mobile responsive buttons */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.7rem 1.4rem;
+    font-size: 1.4rem;
+  }
+  
+  .position {
+    bottom: 2rem;
+    font-size: 1.3rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.3rem;
+  }
+  
+  .position {
+    bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+}

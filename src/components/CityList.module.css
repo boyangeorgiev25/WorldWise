@@ -13,3 +13,18 @@
 .cityList::-webkit-scrollbar {
   width: 0;
 }
+
+/* Mobile responsive city list */
+@media (max-width: 768px) {
+  .cityList {
+    height: 50vh;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cityList {
+    height: 45vh;
+    gap: 0.8rem;
+  }
+}
